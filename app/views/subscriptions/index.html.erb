@@ -51,7 +51,7 @@
 </div>
 
 <% other_formats_links do |f| %>
-    <%= f.link_to t('export.title.pdf'), :url => params if User.current.allowed_to?(:export_subscriptions, @project)%>
+    <%= f.link_to t('export.title.pdf'), :url => params.to_unsafe_hash if User.current.allowed_to?(:export_subscriptions, @project)%>
 <% end %>
 
 <% content_for :sidebar do %>

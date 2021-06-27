@@ -3,7 +3,7 @@ class TtmSettingsController < ApplicationController
   menu_item :ttm_settings
 
   layout 'admin'
-  before_filter :require_admin
+  before_action :require_admin
 
   def index
     @subscriptions = TTM::Subscription.all
